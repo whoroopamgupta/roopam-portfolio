@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with Kubernetes",
+      "excerpt": "A comprehensive guide to understanding and deploying your first Kubernetes cluster.",
+      "date": "Coming Soon",
+      "tags": ["Kubernetes", "DevOps", "Cloud"],
+      "link": "https://medium.com/@yourusername/kubernetes-guide",
+      "image": "/blog/kubernetes.jpg",
+      "readTime": "8 min read"
+    },
+    {
+      "id": 2,
+      "title": "Infrastructure as Code with Terraform",
+      "excerpt": "Learn how to manage cloud infrastructure using Terraform best practices.",
+      "date": "Coming Soon",
+      "tags": ["Terraform", "IaC", "AWS"],
+      "link": "https://medium.com/@yourusername/terraform-guide",
+      "image": "/blog/terraform.jpg",
+      "readTime": "6 min read"
+    },
+    {
+      "id": 3,
+      "title": "CI/CD Pipeline Optimization",
+      "excerpt": "Tips and tricks for building efficient and reliable CI/CD pipelines.",
+      "date": "Coming Soon",
+      "tags": ["CI/CD", "DevOps", "Automation"],
+      "link": "https://medium.com/@yourusername/cicd-optimization",
+      "image": "/blog/cicd.jpg",
+      "readTime": "7 min read"
+    },
+    {
+      "id": 4,
+      "title": "Docker Best Practices for Production",
+      "excerpt": "Essential practices for containerizing applications and running them in production.",
+      "date": "Coming Soon",
+      "tags": ["Docker", "Containers", "DevOps"],
+      "link": "https://medium.com/@yourusername/docker-best-practices",
+      "image": "/blog/docker.jpg",
+      "readTime": "10 min read"
+    },
+    {
+      "id": 5,
+      "title": "AWS Security Best Practices",
+      "excerpt": "Comprehensive guide to securing your AWS infrastructure and applications.",
+      "date": "Coming Soon",
+      "tags": ["AWS", "Security", "Cloud"],
+      "link": "https://medium.com/@yourusername/aws-security",
+      "image": "/blog/aws-security.jpg",
+      "readTime": "12 min read"
+    },
+    {
+      "id": 6,
+      "title": "Monitoring with Prometheus & Grafana",
+      "excerpt": "Set up comprehensive monitoring for your microservices architecture.",
+      "date": "Coming Soon",
+      "tags": ["Monitoring", "Prometheus", "Grafana"],
+      "link": "https://medium.com/@yourusername/monitoring-guide",
+      "image": "/blog/monitoring.jpg",
+      "readTime": "9 min read"
+    }
+  ]
+}
+

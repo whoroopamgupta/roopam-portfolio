@@ -1,0 +1,69 @@
+{
+  "skills": [
+    { "name": "AWS", "level": "Proficient", "percentage": 90, "icon": "☁️" },
+    { "name": "Kubernetes", "level": "Proficient", "percentage": 85, "icon": "☸️" },
+    { "name": "Docker", "level": "Proficient", "percentage": 90, "icon": "🐳" },
+    { "name": "Terraform", "level": "Intermediate", "percentage": 75, "icon": "🏗️" },
+    { "name": "Python", "level": "Intermediate", "percentage": 70, "icon": "🐍" },
+    { "name": "CI/CD", "level": "Proficient", "percentage": 85, "icon": "🔄" },
+    { "name": "GCP", "level": "Intermediate", "percentage": 65, "icon": "☁️" },
+    { "name": "Ansible", "level": "Familiar", "percentage": 50, "icon": "⚙️" }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "link": "https://example.com/cert1",
+      "icon": "☁️"
+    },
+    {
+      "name": "Kubernetes Administrator (CKA)",
+      "link": "https://example.com/cert2",
+      "icon": "☸️"
+    },
+    {
+      "name": "HashiCorp Terraform Associate",
+      "link": "https://example.com/cert3",
+      "icon": "🏗️"
+    },
+    {
+      "name": "AWS DevOps Engineer Professional",
+      "link": "https://example.com/cert4",
+      "icon": "🎓"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Cloud Infrastructure Automation",
+      "description": "Built scalable infrastructure using Terraform and AWS, reducing deployment time by 60%.",
+      "tech": ["AWS", "Terraform", "Docker"],
+      "link": "https://example.com/project1",
+      "github": "https://github.com/yourusername/project1",
+      "image": "/projects/project1.jpg"
+    },
+    {
+      "title": "Kubernetes Cluster Management",
+      "description": "Managed multi-tenant K8s clusters with auto-scaling and monitoring solutions.",
+      "tech": ["Kubernetes", "Prometheus", "Grafana"],
+      "link": "https://example.com/project2",
+      "github": "https://github.com/yourusername/project2",
+      "image": "/projects/project2.jpg"
+    },
+    {
+      "title": "CI/CD Pipeline Optimization",
+      "description": "Designed and implemented GitLab CI/CD pipelines, improving release frequency by 3x.",
+      "tech": ["GitLab CI", "Docker", "Python"],
+      "link": "https://example.com/project3",
+      "github": "https://github.com/yourusername/project3",
+      "image": "/projects/project3.jpg"
+    },
+    {
+      "title": "Multi-Cloud Migration",
+      "description": "Led migration of legacy applications to AWS and GCP with zero downtime.",
+      "tech": ["AWS", "GCP", "Terraform"],
+      "link": "https://example.com/project4",
+      "github": "https://github.com/yourusername/project4",
+      "image": "/projects/project4.jpg"
+    }
+  ]
+}
+

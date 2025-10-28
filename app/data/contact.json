@@ -1,0 +1,37 @@
+{
+  "title": "Links/Contact",
+  "contacts": [
+    {
+      "label": "Email:",
+      "display": "roopamgupta68@gmail.com",
+      "link": "mailto:roopamgupta68@gmail.com"
+    },
+    {
+      "label": "GitHub:",
+      "display": "github.com/whoroopamgupta",
+      "link": "https://github.com/whoroopamgupta"
+    },
+    {
+      "label": "Instagram:",
+      "display": "@whoroopamgupta",
+      "link": "https://instagram.com/whoroopamgupta"
+    },
+    {
+      "label": "Instagram Dev:",
+      "display": "@webdevarmy",
+      "link": "https://instagram.com/WebDevArmy"
+    },
+    {
+      "label": "Instagram Dev:",
+      "display": "@cssdevarmy",
+      "link": "https://instagram.com/CSSDevArmy"
+    },
+    {
+      "label": "LinkedIn:",
+      "display": "linkedin.com/in/roopam-badoniya-947748195",
+      "link": "https://www.linkedin.com/in/roopam-badoniya-947748195/"
+    }
+  ]
+}
+
+
