@@ -6,9 +6,10 @@ import Navbar from '../components/Navbar';
 import resumeData from '../data/resume.json';
 
 export default function Resume() {
-  const { skills, certifications, projects } = resumeData;
+  const { skills, certifications, projects, tools } = resumeData;
   const [isMobile, setIsMobile] = useState(false);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [showTools, setShowTools] = useState(false);
 
   useEffect(() => {
     document.title = 'Roopam Badoniya - Resume';
@@ -344,6 +345,115 @@ export default function Resume() {
                       </div>
                     ))}
                   </div>
+
+                  {/* Tools & Technologies Dropdown */}
+                  {tools && tools.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.6 }}
+                      style={{ marginTop: '24px' }}
+                    >
+                      <button
+                        onClick={() => setShowTools(!showTools)}
+                        style={{
+                          width: '100%',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '12px 16px',
+                          background: 'rgba(123, 92, 255, 0.05)',
+                          border: '1px solid rgba(123, 92, 255, 0.2)',
+                          borderRadius: '8px',
+                          color: 'rgba(255, 255, 255, 0.8)',
+                          fontSize: '13px',
+                          fontWeight: '600',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'rgba(123, 92, 255, 0.1)';
+                          e.currentTarget.style.borderColor = 'rgba(123, 92, 255, 0.4)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'rgba(123, 92, 255, 0.05)';
+                          e.currentTarget.style.borderColor = 'rgba(123, 92, 255, 0.2)';
+                        }}
+                      >
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <span style={{ fontSize: '16px' }}>🛠️</span>
+                          Tools & Technologies ({tools.length})
+                        </span>
+                        <svg 
+                          width="16" 
+                          height="16" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                          style={{
+                            transform: showTools ? 'rotate(180deg)' : 'rotate(0deg)',
+                            transition: 'transform 0.3s ease'
+                          }}
+                        >
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </button>
+
+                      {/* Tools List - Collapsible */}
+                      <motion.div
+                        initial={false}
+                        animate={{ 
+                          height: showTools ? 'auto' : 0,
+                          opacity: showTools ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        style={{
+                          overflow: 'hidden',
+                        }}
+                      >
+                        <div style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+                          gap: '12px',
+                          marginTop: '12px',
+                          padding: '8px 0'
+                        }}>
+                          {tools.map((tool, index) => (
+                            <motion.div
+                              key={index}
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: showTools ? 1 : 0, y: showTools ? 0 : -10 }}
+                              transition={{ delay: index * 0.05 }}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                padding: '8px 12px',
+                                background: 'rgba(255, 255, 255, 0.03)',
+                                borderRadius: '6px',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                              }}
+                            >
+                              <span style={{ fontSize: '16px', flexShrink: 0 }}>
+                                {tool.icon}
+                              </span>
+                              <span style={{
+                                color: 'rgba(255, 255, 255, 0.8)',
+                                fontSize: '12px',
+                                fontWeight: '500',
+                                whiteSpace: 'nowrap'
+                              }}>
+                                {tool.name}
+                              </span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  )}
                 </motion.div>
               </div>
 

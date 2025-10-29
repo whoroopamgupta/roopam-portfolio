@@ -13,7 +13,20 @@
     { "name": "Linux", "level": "Proficient", "percentage": 90, "icon": "🐧" },
     { "name": "Networking", "level": "Proficient", "percentage": 85, "icon": "🌐" },
     { "name": "Ansible", "level": "Familiar", "percentage": 50, "icon": "📝" },
-    { "name": "Cloud Formation", "level": "Intermediate", "percentage": 75, "icon": "📋" }
+    { "name": "Cloud Formation", "level": "Intermediate", "percentage": 75, "icon": "📋" },
+    { "name": "ReactJS", "level": "Proficient", "percentage": 85, "icon": "📊" },
+    { "name": "NextJS", "level": "Intermediate", "percentage": 70, "icon": "🔗" },
+    { "name": "JavaScript", "level": "Proficient", "percentage": 85, "icon": "🎨" },
+    { "name": "HTML/CSS", "level": "Proficient", "percentage": 85, "icon": "🔗" }
+  ],
+  "tools": [
+    { "name": "Prisma", "icon": "💎" },
+    { "name": "Splunk", "icon": "📊" },
+    { "name": "Visual Studio", "icon": "💻" },
+    { "name": "Jira", "icon": "📋" },
+    { "name": "Confluence", "icon": "📝" },
+    { "name": "Vercel", "icon": "▲" },
+    { "name": "Service Now", "icon": "🔧" }
   ],
   "certifications": [
     {
