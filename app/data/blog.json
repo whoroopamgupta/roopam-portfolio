@@ -2,64 +2,73 @@
   "posts": [
     {
       "id": 1,
-      "title": "Getting Started with Kubernetes",
-      "excerpt": "A comprehensive guide to understanding and deploying your first Kubernetes cluster.",
-      "date": "Coming Soon",
-      "tags": ["Kubernetes", "DevOps", "Cloud"],
-      "link": "https://medium.com/@yourusername/kubernetes-guide",
-      "image": "/blog/kubernetes.jpg",
-      "readTime": "8 min read"
+      "title": "Terraform-3-ENV-Infra-Deploy",
+      "excerpt": "I coded Terraform to Create Multi-Environment AWS Infrastructure : Step By Step Guide to deploy the whole infra with actual deployment images",
+      "date": "Published",
+      "tags": ["Terraform", "AWS", "EC2", "DynamoDB", "S3", "VPC", "IAM"],
+      "link": "https://webdevarmy.notion.site/I-coded-Terraform-to-Create-Multi-Environment-AWS-Infrastructure-2410220164cf802aa1bbfbdc9d5b0486",
+      "image": "/resumeImages/terraform-project.png",
+      "readTime": "15 min read"
     },
     {
       "id": 2,
-      "title": "Infrastructure as Code with Terraform",
-      "excerpt": "Learn how to manage cloud infrastructure using Terraform best practices.",
-      "date": "Coming Soon",
-      "tags": ["Terraform", "IaC", "AWS"],
-      "link": "https://medium.com/@yourusername/terraform-guide",
-      "image": "/blog/terraform.jpg",
-      "readTime": "6 min read"
-    },
-    {
-      "id": 3,
-      "title": "CI/CD Pipeline Optimization",
-      "excerpt": "Tips and tricks for building efficient and reliable CI/CD pipelines.",
-      "date": "Coming Soon",
-      "tags": ["CI/CD", "DevOps", "Automation"],
-      "link": "https://medium.com/@yourusername/cicd-optimization",
-      "image": "/blog/cicd.jpg",
-      "readTime": "7 min read"
-    },
-    {
-      "id": 4,
-      "title": "Docker Best Practices for Production",
-      "excerpt": "Essential practices for containerizing applications and running them in production.",
-      "date": "Coming Soon",
-      "tags": ["Docker", "Containers", "DevOps"],
-      "link": "https://medium.com/@yourusername/docker-best-practices",
-      "image": "/blog/docker.jpg",
-      "readTime": "10 min read"
-    },
-    {
-      "id": 5,
-      "title": "AWS Security Best Practices",
-      "excerpt": "Comprehensive guide to securing your AWS infrastructure and applications.",
-      "date": "Coming Soon",
-      "tags": ["AWS", "Security", "Cloud"],
-      "link": "https://medium.com/@yourusername/aws-security",
-      "image": "/blog/aws-security.jpg",
+      "title": "Terraform-EKS",
+      "excerpt": "I created an EKS Cluster (worker nodes setup using autoscaling) along with VPC configuration using Terraform",
+      "date": "Published",
+      "tags": ["AWS", "EKS", "VPC", "Terraform", "Kubernetes"],
+      "link": "https://github.com/whoroopamgupta/terraform-eks",
+      "image": "/resumeImages/terraform-eks.png",
       "readTime": "12 min read"
     },
     {
+      "id": 3,
+      "title": "Deploying React App with AWS S3 Buckets (in just 6 steps)",
+      "excerpt": "I Deployed a React App with AWS S3 Buckets in just 6 steps",
+      "date": "Published",
+      "tags": ["AWS", "S3", "Deployment", "React"],
+      "link": "https://webdevarmy.notion.site/Deploying-React-App-with-AWS-S3-Buckets-in-just-6-steps-2510220164cf8087bc21ee9216e9590c",
+      "image": "/resumeImages/react-s3-deploy.png",
+      "readTime": "6 min read"
+    },
+    {
+      "id": 4,
+      "title": "Sending Email(SNS) when file is uploaded to S3 using Lambda",
+      "excerpt": "I Sent Email(SNS) when file is uploaded to S3 using Lambda",
+      "date": "Published",
+      "tags": ["AWS", "S3", "SNS", "Lambda", "Serverless"],
+      "link": "https://webdevarmy.notion.site/Sending-Email-SNS-when-file-is-uploaded-to-S3-using-Lambda-2520220164cf80778c0ec866e9454288",
+      "image": "/resumeImages/aws-sns-s3.png",
+      "readTime": "8 min read"
+    },
+    {
+      "id": 5,
+      "title": "AWS Step Function with SQS & SNS",
+      "excerpt": "AWS Step Functions with SQS and SNS - Separate & Combined.",
+      "date": "Published",
+      "tags": ["AWS", "Step Functions", "SQS", "SNS", "ASL"],
+      "link": "https://webdevarmy.notion.site/AWS-Step-Functions-with-SQS-and-SNS-Separate-Combined-29b0220164cf8098aee5e032fd479f21",
+      "image": "/resumeImages/aws-sqs-sns.png",
+      "readTime": "10 min read"
+    },
+    {
       "id": 6,
-      "title": "Monitoring with Prometheus & Grafana",
-      "excerpt": "Set up comprehensive monitoring for your microservices architecture.",
-      "date": "Coming Soon",
-      "tags": ["Monitoring", "Prometheus", "Grafana"],
-      "link": "https://medium.com/@yourusername/monitoring-guide",
-      "image": "/blog/monitoring.jpg",
+      "title": "AWS Step Function With Lambda",
+      "excerpt": "AWS Step Function + Lambda & Executing an Step Function with Lambda.",
+      "date": "Published",
+      "tags": ["AWS", "Step Functions", "Lambda", "Serverless"],
+      "link": "https://webdevarmy.notion.site/AWS-Step-Functions-2490220164cf805fbf95cb6f8b7e53bb",
+      "image": "/resumeImages/awsStepFun-lambda.png",
       "readTime": "9 min read"
+    },
+    {
+      "id": 7,
+      "title": "Step Function With DynamoDB",
+      "excerpt": "AWS Step Function + Lambda & Executing an Step Function with Lambda.",
+      "date": "Published",
+      "tags": ["AWS", "Step Functions", "DynamoDB", "Database"],
+      "link": "https://webdevarmy.notion.site/Step-Functions-with-DynamoDB-24b0220164cf80259b4dce668cfb246a",
+      "image": "/resumeImages/stepFun-dynamoDB.png",
+      "readTime": "11 min read"
     }
   ]
 }
-

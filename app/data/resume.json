@@ -1,23 +1,29 @@
 {
   "skills": [
-    { "name": "AWS", "level": "Proficient", "percentage": 90, "icon": "☁️" },
-    { "name": "Kubernetes", "level": "Proficient", "percentage": 85, "icon": "☸️" },
-    { "name": "Docker", "level": "Proficient", "percentage": 90, "icon": "🐳" },
-    { "name": "Terraform", "level": "Intermediate", "percentage": 75, "icon": "🏗️" },
-    { "name": "Python", "level": "Intermediate", "percentage": 70, "icon": "🐍" },
-    { "name": "CI/CD", "level": "Proficient", "percentage": 85, "icon": "🔄" },
-    { "name": "GCP", "level": "Intermediate", "percentage": 65, "icon": "☁️" },
-    { "name": "Ansible", "level": "Familiar", "percentage": 50, "icon": "⚙️" }
+    { "name": "AWS", "level": "Proficient", "percentage": 95, "icon": "☁️" },
+    { "name": "GCP", "level": "Proficient", "percentage": 90, "icon": "☁️" },
+    { "name": "Kubernetes", "level": "Intermediate", "percentage": 80, "icon": "☸️" },
+    { "name": "Terraform", "level": "Proficient", "percentage": 85, "icon": "🏗️" },
+    { "name": "Docker", "level": "Intermediate", "percentage": 80, "icon": "🐳" },
+    { "name": "Python", "level": "Intermediate", "percentage": 75, "icon": "🐍" },
+    { "name": "CI/CD", "level": "Proficient", "percentage": 75, "icon": "🔄" },
+    { "name": "Azure DevOps", "level": "Intermediate", "percentage":75, "icon": "🔵" },
+    { "name": "Git/Github", "level": "Proficient", "percentage": 90, "icon": "🐙" },
+    { "name": "GitLab CI/CD", "level": "Intermediate", "percentage": 80, "icon": "🦊" },
+    { "name": "Linux", "level": "Proficient", "percentage": 90, "icon": "🐧" },
+    { "name": "Networking", "level": "Proficient", "percentage": 85, "icon": "🌐" },
+    { "name": "Ansible", "level": "Familiar", "percentage": 50, "icon": "📝" },
+    { "name": "Cloud Formation", "level": "Intermediate", "percentage": 75, "icon": "📋" }
   ],
   "certifications": [
     {
       "name": "AWS Certified Solutions Architect - Associate",
-      "link": "https://drive.google.com/file/d/1uwqBuORM_o93iFppkd1om-o1WQvj9oyL/view",
+      "file": "/certificates/AWS Certified Solutions Architect - Associate certificate.pdf",
       "icon": "🟧"
     },
     {
       "name": "GCP - Associate Cloud Engineer",
-      "link": "https://drive.google.com/file/d/1Kz5UvPao1HnuV9nVslPUjIspWQzAU9-V/view",
+      "file": "/certificates/GCP_CERTIFICATE.pdf",
       "icon": "🔵"
     }
   ],
@@ -31,28 +37,50 @@
       "image": "/resumeImages/terraform-project.png"
     },
     {
-      "title": "Kubernetes Cluster Management",
-      "description": "Managed multi-tenant K8s clusters with auto-scaling and monitoring solutions.",
-      "tech": ["Kubernetes", "Prometheus", "Grafana"],
-      "link": "https://example.com/project2",
-      "github": "https://github.com/yourusername/project2",
-      "image": "/projects/project2.jpg"
+      "title": "Terraform-EKS",
+      "description": "I created an EKS Cluster (worker nodes setup using autoscaling) along with VPC configuration using Terraform",
+      "tech": ["AWS : EKS, VPC", "Terraform"],
+      "link": "https://github.com/whoroopamgupta/terraform-eks",
+      "github": "https://github.com/whoroopamgupta/terraform-eks",
+      "image": "/resumeImages/terraform-eks.png"
     },
     {
-      "title": "CI/CD Pipeline Optimization",
-      "description": "Designed and implemented GitLab CI/CD pipelines, improving release frequency by 3x.",
-      "tech": ["GitLab CI", "Docker", "Python"],
-      "link": "https://example.com/project3",
-      "github": "https://github.com/yourusername/project3",
-      "image": "/projects/project3.jpg"
+      "title": "Deploying React App with AWS S3  Buckets (in just 6 steps)",
+      "description": "I Deployed a React App with AWS S3 Buckets in just 6 steps",
+      "tech": ["AWS", "S3", "Deployment"],
+      "link": "https://webdevarmy.notion.site/Deploying-React-App-with-AWS-S3-Buckets-in-just-6-steps-2510220164cf8087bc21ee9216e9590c",
+      "liveLink": "http://my-test-vite-react-app.s3-website-us-east-1.amazonaws.com/",
+      "image": "/resumeImages/react-s3-deploy.png"
     },
     {
-      "title": "Multi-Cloud Migration",
-      "description": "Led migration of legacy applications to AWS and GCP with zero downtime.",
-      "tech": ["AWS", "GCP", "Terraform"],
-      "link": "https://example.com/project4",
-      "github": "https://github.com/yourusername/project4",
-      "image": "/projects/project4.jpg"
+      "title": "# Sending Email(SNS) when file is uploaded to S3 using Lambda",
+      "description": "I Sent Email(SNS) when file is uploaded to S3 using Lambda",
+      "tech": ["AWS", "S3", "SNS", "Lambda"],
+      "link": "https://webdevarmy.notion.site/Sending-Email-SNS-when-file-is-uploaded-to-S3-using-Lambda-2520220164cf80778c0ec866e9454288",
+      "image": "/resumeImages/aws-sns-s3.png"
+    },
+    {
+      "title": "AWS Step Function with SQS & SNS",
+      "description": "AWS Step Functions with SQS and SNS - Separate & Combined.",
+      "tech": ["AWS : Step Functions, SQS, SNS", "ASL"],
+      "link": "https://webdevarmy.notion.site/AWS-Step-Functions-with-SQS-and-SNS-Separate-Combined-29b0220164cf8098aee5e032fd479f21",
+      "github": "https://github.com/whoroopamgupta/aws-step-fun-sqs-sns-asl",
+      "image": "/resumeImages/aws-sqs-sns.png"
+    },
+    {
+      "title": "AWS Step Function With Lambda",
+      "description": "AWS Step Function + Lambda & Executing an Step Function with Lambda.",
+      "tech": ["AWS", "Step Functions", "Lambda"],
+      "link": "https://webdevarmy.notion.site/AWS-Step-Functions-2490220164cf805fbf95cb6f8b7e53bb",
+      "github": "https://github.com/whoroopamgupta/stepFunction-lambda-aws",
+      "image": "/resumeImages/awsStepFun-lambda.png"
+    },
+    {
+      "title": "Step Function With DynamoDB",
+      "description": "AWS Step Function + Lambda & Executing an Step Function with Lambda.",
+      "tech": ["AWS", "Step Functions", "DynamoDB"],
+      "link": "https://webdevarmy.notion.site/Step-Functions-with-DynamoDB-24b0220164cf80259b4dce668cfb246a",
+      "image": "/resumeImages/stepFun-dynamoDB.png"
     }
   ]
 }
