@@ -7,15 +7,6 @@ import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {
     document.title = 'Roopam Badoniya - About';
-    // Prevent scrolling on this page
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
-    
-    return () => {
-      // Restore scrolling when leaving the page
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-    };
   }, []);
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -26,9 +17,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="relative z-10" style={{ height: '100vh', overflow: 'hidden' }}>
+      <main className="relative z-10">
         {/* Hero Section */}
-        <section style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 24px' }}>
+        <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 24px' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

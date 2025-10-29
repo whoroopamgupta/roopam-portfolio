@@ -11,34 +11,24 @@
   ],
   "certifications": [
     {
-      "name": "AWS Certified Solutions Architect",
-      "link": "https://example.com/cert1",
-      "icon": "☁️"
+      "name": "AWS Certified Solutions Architect - Associate",
+      "link": "https://drive.google.com/file/d/1uwqBuORM_o93iFppkd1om-o1WQvj9oyL/view",
+      "icon": "🟧"
     },
     {
-      "name": "Kubernetes Administrator (CKA)",
-      "link": "https://example.com/cert2",
-      "icon": "☸️"
-    },
-    {
-      "name": "HashiCorp Terraform Associate",
-      "link": "https://example.com/cert3",
-      "icon": "🏗️"
-    },
-    {
-      "name": "AWS DevOps Engineer Professional",
-      "link": "https://example.com/cert4",
-      "icon": "🎓"
+      "name": "GCP - Associate Cloud Engineer",
+      "link": "https://drive.google.com/file/d/1Kz5UvPao1HnuV9nVslPUjIspWQzAU9-V/view",
+      "icon": "🔵"
     }
   ],
   "projects": [
     {
-      "title": "Cloud Infrastructure Automation",
-      "description": "Built scalable infrastructure using Terraform and AWS, reducing deployment time by 60%.",
-      "tech": ["AWS", "Terraform", "Docker"],
-      "link": "https://example.com/project1",
-      "github": "https://github.com/yourusername/project1",
-      "image": "/projects/project1.jpg"
+      "title": "Terraform-3-ENV-Infra-Deploy",
+      "description": "I coded Terraform to Create Multi-Environment AWS Infrastructure : Step By Step Guide to deploy the whole infra with actual deployment images",
+      "tech": ["Terraform", "AWS : EC2, DynamoDB, S3, VPC, IAM, etc."],
+      "link": "https://webdevarmy.notion.site/I-coded-Terraform-to-Create-Multi-Environment-AWS-Infrastructure-2410220164cf802aa1bbfbdc9d5b0486",
+      "github": "https://github.com/whoroopamgupta/terraform-3-env-infra-deploy/tree/main",
+      "image": "/resumeImages/terraform-project.png"
     },
     {
       "title": "Kubernetes Cluster Management",
@@ -66,4 +56,3 @@
     }
   ]
 }
-

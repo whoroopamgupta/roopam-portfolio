@@ -9,21 +9,12 @@ import { useEffect } from 'react';
 export default function Contact() {
   useEffect(() => {
     document.title = 'Roopam Badoniya - Contact';
-    // Prevent scrolling on this page
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
-    
-    return () => {
-      // Restore scrolling when leaving the page
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-    };
   }, []);
   return (
     <>
       <Navbar />
-      <main className="relative z-10" style={{ height: '100vh', overflow: 'hidden' }}>
-        <section style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 24px' }}>
+      <main className="relative z-10">
+        <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 24px' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
