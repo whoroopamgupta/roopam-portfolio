@@ -572,6 +572,54 @@ export default function Resume() {
                       </motion.div>
                     ))}
                   </div>
+
+                  {/* Download CV Button - Bottom of Projects */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    style={{ 
+                      display: 'flex', 
+                      justifyContent: 'center',
+                      marginTop: '40px',
+                      paddingTop: '32px',
+                      borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+                    }}
+                  >
+                    <motion.a
+                      href="https://drive.google.com/file/d/1lI33tU-kJ7M0D2qEcv4K4Zl_IciF-Km7/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        padding: '14px 28px',
+                        background: 'linear-gradient(to right, #7B5CFF, rgba(123, 92, 255, 0.9))',
+                        color: 'white',
+                        textDecoration: 'none',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '15px',
+                        letterSpacing: '0.5px',
+                        transition: 'all 0.3s ease',
+                        boxShadow: '0 4px 12px rgba(123, 92, 255, 0.2)',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(123, 92, 255, 0.4)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = '0 4px 12px rgba(123, 92, 255, 0.2)';
+                      }}
+                    >
+                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                      </svg>
+                      Download CV
+                    </motion.a>
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
