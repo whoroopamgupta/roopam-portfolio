@@ -795,49 +795,146 @@ export default function Resume() {
                   {selectedCertificate.name}
                 </h3>
               </div>
-              <button
-                onClick={closeCertificateModal}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  border: 'none',
-                  borderRadius: '8px',
-                  width: '36px',
-                  height: '36px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 59, 48, 0.2)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
-                }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                {/* Download Button - Only for images */}
+                {!selectedCertificate.file.endsWith('.pdf') && (
+                  <a
+                    href={selectedCertificate.file}
+                    download={`${selectedCertificate.name}.png`}
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      background: 'rgba(123, 92, 255, 0.2)',
+                      border: '1px solid rgba(123, 92, 255, 0.4)',
+                      borderRadius: '8px',
+                      width: '36px',
+                      height: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(123, 92, 255, 0.3)';
+                      e.currentTarget.style.borderColor = 'rgba(123, 92, 255, 0.6)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(123, 92, 255, 0.2)';
+                      e.currentTarget.style.borderColor = 'rgba(123, 92, 255, 0.4)';
+                    }}
+                    title="Download Certificate"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(123, 92, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                  </a>
+                )}
+                {/* Open in New Tab Button - Only for images */}
+                {!selectedCertificate.file.endsWith('.pdf') && (
+                  <a
+                    href={selectedCertificate.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      background: 'rgba(123, 92, 255, 0.2)',
+                      border: '1px solid rgba(123, 92, 255, 0.4)',
+                      borderRadius: '8px',
+                      width: '36px',
+                      height: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(123, 92, 255, 0.3)';
+                      e.currentTarget.style.borderColor = 'rgba(123, 92, 255, 0.6)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(123, 92, 255, 0.2)';
+                      e.currentTarget.style.borderColor = 'rgba(123, 92, 255, 0.4)';
+                    }}
+                    title="Open in New Tab"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(123, 92, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                )}
+                {/* Close Button */}
+                <button
+                  onClick={closeCertificateModal}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: 'none',
+                    borderRadius: '8px',
+                    width: '36px',
+                    height: '36px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 59, 48, 0.2)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                  }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
             </div>
 
-            {/* Certificate PDF Viewer */}
+            {/* Certificate Viewer - PDF or Image */}
             <div style={{
               width: '100%',
               height: 'calc(90vh - 80px)',
               overflow: 'auto',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(0, 0, 0, 0.3)',
             }}>
-              <iframe
-                src={selectedCertificate.file}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  border: 'none',
-                }}
-                title={selectedCertificate.name}
-              />
+              {selectedCertificate.file.endsWith('.pdf') ? (
+                <iframe
+                  src={selectedCertificate.file}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                  }}
+                  title={selectedCertificate.name}
+                />
+              ) : (
+                <img
+                  src={selectedCertificate.file}
+                  alt={selectedCertificate.name}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    padding: '20px',
+                  }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.innerHTML = '<div style="color: rgba(255, 255, 255, 0.6); text-align: center; padding: 40px;">Certificate image could not be loaded</div>';
+                  }}
+                />
+              )}
             </div>
           </motion.div>
         </motion.div>

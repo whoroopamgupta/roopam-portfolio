@@ -38,6 +38,11 @@
       "name": "GCP - Associate Cloud Engineer",
       "file": "/certificates/GCP_CERTIFICATE.pdf",
       "icon": "🔵"
+    },
+    {
+      "name": "Snowpro Core Certified",
+      "file": "/certificates/snowpro_core_cert.png",
+      "icon": "❄️"
     }
   ],
   "projects": [
