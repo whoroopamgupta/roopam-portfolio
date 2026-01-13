@@ -3,7 +3,6 @@
 This is a **frontend-only DevOps/Cloud Engineer Portfolio** built with **Next.js**. The portfolio will be minimalistic, clean, and developer-themed, with subtle animations. It will feature a dot-grid background, monospace accents, code-like section headings, and interactive UI components.
 
 The goal of this step is to:
-
 1. Setup **global theme & design tokens**
 2. Build a **responsive Navbar** with smooth scroll
 
