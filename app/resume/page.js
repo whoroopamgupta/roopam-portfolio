@@ -10,14 +10,25 @@ export default function Resume() {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
   const [showTools, setShowTools] = useState(false);
+  const [resumeUrl, setResumeUrl] = useState(null);
 
   useEffect(() => {
     document.title = 'Roopam Badoniya - Resume';
-    
+
+    // Fetch resume link
+    fetch('https://raw.githubusercontent.com/whoroopamgupta/roopam-resume/refs/heads/main/resume.json')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.resumeLink) {
+          setResumeUrl(data.resumeLink);
+        }
+      })
+      .catch(error => console.error('Error fetching resume link:', error));
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     handleResize(); // Set initial value
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -62,14 +73,14 @@ export default function Resume() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              style={{ 
-                display: 'flex', 
+              style={{
+                display: 'flex',
                 justifyContent: 'flex-end',
                 marginBottom: '32px'
               }}
             >
               <motion.a
-                href="https://drive.google.com/file/d/1lI33tU-kJ7M0D2qEcv4K4Zl_IciF-Km7/view?usp=sharing"
+                href={resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -97,15 +108,15 @@ export default function Resume() {
                 }}
               >
                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                 </svg>
                 Download CV
               </motion.a>
             </motion.div>
 
             {/* Two Column Layout - Desktop */}
-            <div style={{ 
-              display: 'grid', 
+            <div style={{
+              display: 'grid',
               gridTemplateColumns: isMobile ? '1fr' : '0.85fr 1.15fr',
               gap: '40px',
             }}>
@@ -123,11 +134,11 @@ export default function Resume() {
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                   }}
                 >
-                  <h2 style={{ 
-                    fontSize: '1.5rem', 
-                    fontWeight: '700', 
-                    color: 'white', 
-                    marginBottom: '16px' 
+                  <h2 style={{
+                    fontSize: '1.5rem',
+                    fontWeight: '700',
+                    color: 'white',
+                    marginBottom: '16px'
                   }}>
                     Certifications
                   </h2>
@@ -168,8 +179,8 @@ export default function Resume() {
                             {cert.icon}
                           </div>
                           <div style={{ flex: 1, textAlign: 'left' }}>
-                            <span className="cert-name" style={{ 
-                              color: 'rgba(255, 255, 255, 0.8)', 
+                            <span className="cert-name" style={{
+                              color: 'rgba(255, 255, 255, 0.8)',
                               fontSize: '14px',
                               lineHeight: '1.5',
                               transition: 'color 0.3s ease',
@@ -204,7 +215,7 @@ export default function Resume() {
                             </div>
                           </div>
                           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(123, 92, 255, 0.6)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M9 18l6-6-6-6"/>
+                            <path d="M9 18l6-6-6-6" />
                           </svg>
                         </button>
                       </div>
@@ -224,40 +235,40 @@ export default function Resume() {
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                   }}
                 >
-                  <h2 style={{ 
-                    fontSize: '1.5rem', 
-                    fontWeight: '700', 
-                    color: 'white', 
-                    marginBottom: '20px' 
+                  <h2 style={{
+                    fontSize: '1.5rem',
+                    fontWeight: '700',
+                    color: 'white',
+                    marginBottom: '20px'
                   }}>
                     Skills & Technologies
                   </h2>
-                  
+
                   {/* Skills List */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                     {/* Legend Row - Above the bars */}
-                    <div style={{ 
-                      display: 'grid', 
+                    <div style={{
+                      display: 'grid',
                       gridTemplateColumns: '110px 1fr',
                       gap: '12px',
                       marginBottom: '4px'
                     }}>
                       <div></div>
-                      <div style={{ 
-                        display: 'flex', 
+                      <div style={{
+                        display: 'flex',
                         justifyContent: 'space-between',
                         paddingLeft: '4px',
                         paddingRight: '4px'
                       }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                          <div style={{ 
-                            width: '8px', 
-                            height: '8px', 
+                          <div style={{
+                            width: '8px',
+                            height: '8px',
                             background: '#B39DFF',
                             borderRadius: '2px'
                           }} />
-                          <span style={{ 
-                            color: '#B39DFF', 
+                          <span style={{
+                            color: '#B39DFF',
                             fontSize: '10px',
                             fontWeight: '600'
                           }}>
@@ -265,14 +276,14 @@ export default function Resume() {
                           </span>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                          <div style={{ 
-                            width: '8px', 
-                            height: '8px', 
+                          <div style={{
+                            width: '8px',
+                            height: '8px',
                             background: '#9575FF',
                             borderRadius: '2px'
                           }} />
-                          <span style={{ 
-                            color: '#9575FF', 
+                          <span style={{
+                            color: '#9575FF',
                             fontSize: '10px',
                             fontWeight: '600'
                           }}>
@@ -280,14 +291,14 @@ export default function Resume() {
                           </span>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                          <div style={{ 
-                            width: '8px', 
-                            height: '8px', 
+                          <div style={{
+                            width: '8px',
+                            height: '8px',
                             background: '#7B5CFF',
                             borderRadius: '2px'
                           }} />
-                          <span style={{ 
-                            color: '#7B5CFF', 
+                          <span style={{
+                            color: '#7B5CFF',
                             fontSize: '10px',
                             fontWeight: '600'
                           }}>
@@ -299,8 +310,8 @@ export default function Resume() {
 
                     {/* Individual Skills */}
                     {skills.map((skill, index) => (
-                      <div key={index} style={{ 
-                        display: 'grid', 
+                      <div key={index} style={{
+                        display: 'grid',
                         gridTemplateColumns: '110px 1fr',
                         gap: '12px',
                         alignItems: 'center'
@@ -310,14 +321,14 @@ export default function Resume() {
                           alignItems: 'center',
                           gap: '6px'
                         }}>
-                          <span style={{ 
+                          <span style={{
                             fontSize: '16px',
                             opacity: 0.8
                           }}>
                             {skill.icon}
                           </span>
-                          <span style={{ 
-                            color: 'white', 
+                          <span style={{
+                            color: 'white',
                             fontSize: '13px',
                             fontWeight: '500'
                           }}>
@@ -384,14 +395,14 @@ export default function Resume() {
                           <span style={{ fontSize: '16px' }}>🛠️</span>
                           Tools & Technologies ({tools.length})
                         </span>
-                        <svg 
-                          width="16" 
-                          height="16" 
-                          viewBox="0 0 24 24" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
                           strokeLinejoin="round"
                           style={{
                             transform: showTools ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -405,7 +416,7 @@ export default function Resume() {
                       {/* Tools List - Collapsible */}
                       <motion.div
                         initial={false}
-                        animate={{ 
+                        animate={{
                           height: showTools ? 'auto' : 0,
                           opacity: showTools ? 1 : 0,
                         }}
@@ -470,11 +481,11 @@ export default function Resume() {
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                   }}
                 >
-                  <h2 style={{ 
-                    fontSize: '2rem', 
-                    fontWeight: '700', 
-                    color: 'white', 
-                    marginBottom: '32px' 
+                  <h2 style={{
+                    fontSize: '2rem',
+                    fontWeight: '700',
+                    color: 'white',
+                    marginBottom: '32px'
                   }}>
                     Featured Projects
                   </h2>
@@ -514,8 +525,8 @@ export default function Resume() {
                               e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                             }}
                           >
-                            <img 
-                              src={project.image} 
+                            <img
+                              src={project.image}
                               alt={project.title}
                               style={{
                                 width: '100%',
@@ -542,25 +553,25 @@ export default function Resume() {
                             textDecoration: 'none',
                           }}
                         >
-                          <h3 style={{ 
-                            fontSize: '1.2rem', 
-                            fontWeight: '600', 
+                          <h3 style={{
+                            fontSize: '1.2rem',
+                            fontWeight: '600',
                             color: 'white',
                             transition: 'color 0.3s ease',
                             marginBottom: '12px'
                           }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.color = '#7B5CFF';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.color = 'white';
-                          }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.color = '#7B5CFF';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.color = 'white';
+                            }}
                           >
                             {project.title}
                           </h3>
                         </a>
-                        <p style={{ 
-                          color: 'rgba(255, 255, 255, 0.6)', 
+                        <p style={{
+                          color: 'rgba(255, 255, 255, 0.6)',
                           fontSize: '14px',
                           lineHeight: '1.7',
                           marginBottom: '12px'
@@ -626,7 +637,7 @@ export default function Resume() {
                               </svg>
                               View on GitHub
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                                <path d="M5 12h14M12 5l7 7-7 7" />
                               </svg>
                             </a>
                           )}
@@ -688,8 +699,8 @@ export default function Resume() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    style={{ 
-                      display: 'flex', 
+                    style={{
+                      display: 'flex',
                       justifyContent: 'center',
                       marginTop: '40px',
                       paddingTop: '32px',
@@ -697,7 +708,7 @@ export default function Resume() {
                     }}
                   >
                     <motion.a
-                      href="https://drive.google.com/file/d/1lI33tU-kJ7M0D2qEcv4K4Zl_IciF-Km7/view?usp=sharing"
+                      href={resumeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05, y: -2 }}
@@ -725,7 +736,7 @@ export default function Resume() {
                       }}
                     >
                       <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                       </svg>
                       Download CV
                     </motion.a>
